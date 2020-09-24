@@ -3,7 +3,7 @@ def stock_picker(arr)
   value = 0
   i = 0
   while i < arr.length - 2     
-    j = 1
+    j = i + 1
     while j < arr.length - 1
       num = arr[j] - arr[i]
       if num > value 
