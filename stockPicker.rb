@@ -1,19 +1,19 @@
 def stock_picker(arr)
   profit = []
-  value = 0
-  i = 0
-  while i < arr.length - 2     
-    j = i + 1
-    while j < arr.length - 1
-      num = arr[j] - arr[i]
-      if num > value 
-        profit[0] = i
-        profit[1] = j 
-        value = num       
+  max = 0
+  buy = 0
+  while buy < arr.length - 2     
+    sell = buy + 1
+    while sell < arr.length - 1
+      num = arr[sell] - arr[buy]
+      if num > max 
+        profit[0] = buy
+        profit[1] = sell
+        max = num       
       end
-      j += 1
+      sell += 1
     end
-    i += 1
+    buy += 1
   end
   return profit
 end
