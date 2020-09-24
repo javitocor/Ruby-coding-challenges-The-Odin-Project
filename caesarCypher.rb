@@ -1,6 +1,5 @@
-def caesar_cipher(string, number)
-  array = string.bytes
-  array2 = array.map do |x| 
+def caesar_cipher(string, number)  
+  array2 = string.bytes.map do |x| 
     if x >= 65 && x <= 90
       (((x - 65 + number) % 26) + 65).chr
     elsif x >= 97 && x <= 122
